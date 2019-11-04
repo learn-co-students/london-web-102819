@@ -1,0 +1,14 @@
+- Class
+- A < B
+- B < C
+- D < C
+- super
+- Ruby provides us with a built-in function called super that allows us to call methods up the inheritance hierarchy. When you call super from within a method, it will search the inheritance hierarchy for a method by the same name and then invoke it.
+- ClassName.ancestors
+- ClassName.superclass
+- @@variables being overwritten through children
+- Modules as namespaces for methods, `include` keyword
+- Modules as containers for module methods
+- Methods callable via Module.method
+- Private keyword
+- Overriding methods, `send`, `to_s`
