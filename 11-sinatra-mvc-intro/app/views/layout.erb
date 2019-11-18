@@ -1,0 +1,17 @@
+<!-- Layout page - when a client makes a GET request to our server, this page will be rendered first, so every page will contain this HTML. -->
+<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+  <title></title>
+  </head>
+  <body>
+    <h1>My Library</h1>
+    <!-- Navigation bar - as this will be on every page of our site, it makes it really easy for our users to navigate to any of our site's key features at any given time. -->
+    <nav>
+      <a href="/books">All Books</a>
+    </nav>
+    <!-- The yield injects the HTML from the relevant view template into this layout e.g. if the client made a GET request to /books, the HTML from the index view template would be injected here. -->
+    <%= yield %>
+  </body>
+</html>

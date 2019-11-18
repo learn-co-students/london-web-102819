@@ -1,0 +1,12 @@
+source "https://rubygems.org"
+
+gem 'activerecord'
+gem 'sinatra-activerecord'
+gem 'rake'
+gem 'sqlite3'
+gem 'pry'
+gem 'require_all'
+gem 'rack'
+gem 'shotgun' # Makes our Rack server reloadable, meaning changes made to the controller and views will be automatically applied without having to manually restart our server. However, if we make changes to our model or database, we will have to stop the server and restart it.
+gem 'sinatra'
+gem 'rest-client'

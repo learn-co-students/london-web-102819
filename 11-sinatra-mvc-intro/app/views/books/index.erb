@@ -1,0 +1,10 @@
+<!-- Ruby injection tags, allows us to evaluate Ruby code in an HTML file. Putting an = sign into the tag means we want to actually inject the value that the code will return. -->
+<% @books.each do |book| %>
+  <h2>
+    <!-- Inject the value of this book's id into this link's URL in order to get a link to the show route for this particular book e.g. if this book had an id of 1, the URL would become /books/1. -->
+    <a href="/books/<%= book.id %>"><%= book.title %></a>
+  </h2>
+
+  <h3>by <%= book.author%></h3>
+  <p><%= book.snippet %></p>
+<% end %>
