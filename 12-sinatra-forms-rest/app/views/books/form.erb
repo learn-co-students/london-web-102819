@@ -1,0 +1,23 @@
+<!-- This partial defines what a book form will look like. We can now render this same code in both the new and the edit, cutting down on repetition. -->
+<!-- The form's action is the URL we want it to make the request to and the method is the HTTP verb we want it to use. If the instance of book has an id, we'll inject that into the URL e.g. /books/1, otherwise, it will be to /books/, allowing us to use this form for both our create and update routes. -->
+<form class="" action="/books/<%= @book.id %>" method="post">
+  <!-- Labels allow us to give names to the input fields that our user will see on the page. -->
+  <label for="">Title</label>
+  <!-- An input field which a user can type text into. When the form is submitted, a key with the same name as the input field will be created in the params hash. The value of that key will be whatever value was in the input field when the form was submitted. The existing values of the instance of book are injected as the default values of the input fields. -->
+  <input type="text" name="title" value="<%= @book.title %>"><br>
+
+  <label for="">Author</label>
+  <input type="text" name="author" value="<%= @book.author %>"><br>
+
+  <label for="">Snippet</label>
+  <input type="text" name="snippet" value="<%= @book.snippet %>"><br>
+
+  <!-- A submit input tag allows the user to submit the form, which will then make a request to the URL defined in action with the HTTP verb defined in method. -->
+  <input type="submit" name="" value="Save Book">
+
+  <!-- Checks if the instance of book already has an id i.e. does it exist in the database already. -->
+  <% if @book.id %>
+    <!-- If the book does exist already and needs to be updated, we include this hidden field. The name of _method means that Rack::MethodOverride will know to override the form's default post request with the HTTP verb defined as the value of the input field - in this case, patch. -->
+    <input type="hidden" name="_method" value="patch">
+  <% end %>
+</form>

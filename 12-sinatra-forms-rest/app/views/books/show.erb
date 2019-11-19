@@ -1,0 +1,8 @@
+<h2><%= @book.title %></h2>
+<p><%= @book.snippet %></p>
+
+<!-- A form to allow a user to delete this instance of book by making a post request to the URL of this book and then using Rack::MethodOverride to override it with a delete request. -->
+<form class="" action="/books/<%= @book.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" name="" value="Delete Book">
+</form>
