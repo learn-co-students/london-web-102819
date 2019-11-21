@@ -1,0 +1,20 @@
+<!-- This is the general layout for the site. All views for all resources will render this code first and then include their specific template after the yield. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PetSanctuary</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <!-- A link back to the index page, using the pets_path prefix, which will evaluate to the URL "/pets" - in order words, the index route. -->
+      <%= link_to "All Pets", pets_path %>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
