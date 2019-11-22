@@ -1,0 +1,8 @@
+<h1>New Pet</h1>
+<!-- Render our form partial. We just say "form", but Rails is actually going to look for a file called "_form.html.erb" - make sure to put an underscore (_) before the names of your partial files -->
+<!-- We pass it an instance of pet as an argument so that it knows whether submitting the form should create (if @pet is an empty instance) or update (if @pet is an existing pet from our database)-->
+<%= render "form", pet: @pet %>
+
+
+
+<%= link_to 'Back', pets_path %>

@@ -1,0 +1,11 @@
+<!-- This ActionView::Helper will create a form for us. It includes an authenticity token which is necessary to submit requests via a form in Rails. We should only use this form_tag helper for forms that aren't going to create or update an instance of one of our models e.g. a user login form -->
+<%= form_tag pets_path do %>
+  <!-- We can use specific ActionView::Helper methods for each type of input field. The :pet, :name and :pet, :age syntax means that the name and age keys will be placed inside a nested pet hash within params i.e. params => { pet => { name: , age: }}  -->
+  <%= label :pet, :name %>
+  <%= text_field :pet, :name %>
+
+  <%= label :pet, :age %>
+  <%= number_field :pet, :age %>
+
+  <%= submit_tag "Save Pet" %>
+<% end %>
