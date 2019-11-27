@@ -1,0 +1,7 @@
+<%= form_for @post do |t|%>
+   Author: <%= t.collection_select :blogger_id, Blogger.all, :id, :name%>
+   Destination: <%= t.collection_select :destination_id, Destination.all, :id, :name%>
+   Title: <%= t.text_field :title%>
+   Content: <%= t.text_area :content%>
+    <%= t.submit%>
+<% end %>

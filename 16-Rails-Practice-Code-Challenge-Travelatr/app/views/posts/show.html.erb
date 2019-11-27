@@ -1,0 +1,8 @@
+<h1><%= @post.title %> </h1><br>
+<p><%= @post.content %></p><br>
+<h2><%= @post.likes%></h2><br>
+<%= link_to @post.blogger.name,@post.blogger%><br>
+
+<%= link_to @post.destination.name,@post.destination%><br> 
+<%= link_to "Like post", post_liked_path, method: "post"%><br>
+

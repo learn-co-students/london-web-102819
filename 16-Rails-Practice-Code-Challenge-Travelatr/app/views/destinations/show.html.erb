@@ -1,0 +1,9 @@
+<h1><%= @destination.name %></h1>
+<h2><%= @destination.country %></h2>
+<h2><%= @destination.uniq_age_avg %></h2>
+<%= link_to "Featured Post: #{@destination.featured_post.title}",@destination.featured_post%><br>
+
+Most Recent:<br>
+<% @destination.most_recent_5.each do |post|%>
+    <%= link_to post.title, post %><br>
+<% end %>
