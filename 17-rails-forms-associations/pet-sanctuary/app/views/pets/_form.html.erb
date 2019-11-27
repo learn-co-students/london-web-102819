@@ -1,0 +1,13 @@
+
+<%= form_for(@pet) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+
+  <!-- Creates a select drop-down menu and options. The arguments passed to it (in order) correspond to: the name of the key that will be created in the params hash to represent the value of the user's selection (in this case user_id), what the dropdown will be populated with (in this case, all the instances of User), the value that will be submitted from the selected option (in this case, the selected user's id) and the value that will be shown in the dropdown in the view to show the user which option they are selecting (in this case, the username of each user) -->
+  <%= f.collection_select :user_id, User.all, :id, :username %>
+
+  <%= f.submit %>
+<% end %>

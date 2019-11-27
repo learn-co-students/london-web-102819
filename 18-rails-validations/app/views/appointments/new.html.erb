@@ -1,0 +1,22 @@
+<%= form_for @appointment do |f| %>
+    <div class="nes-field">
+        <%= f.label :date %>
+        <%= f.date_field :date, class: 'nes-input' %>
+    </div>
+    <div class="nes-field">
+    <%= f.label :time %>
+    <%= f.time_field :time, class: 'nes-input' %>
+    </div>
+
+    <div class="nes-select">
+    <%= f.label :doctor_id %>
+    <%= f.collection_select :doctor_id, @doctors, :id, :name_specialism, selected: params[:doctor_id] %>
+    </div>
+
+    <div class="nes-select">
+    <%= f.label :patient_id %>
+    <%= f.collection_select :patient_id, @patients, :id, :name, selected: params[:patient_id] %>
+    </div>
+
+    <%= f.submit class: 'nes-btn is-primary', style: 'margin-top: 1rem' %>
+<% end %>

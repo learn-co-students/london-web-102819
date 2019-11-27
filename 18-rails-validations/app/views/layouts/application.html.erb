@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GpsOffice</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class='nes-container is-dark'>
+      <%= link_to 'new patient', new_patient_path, class: current_page?(new_patient_path) ? 'nes-text is-success' : '' %>
+      <%= link_to 'new doctor', new_doctor_path, class: current_page?(new_doctor_path) ? 'nes-text is-success' : '' %>
+      <%= link_to 'new appointment', new_appointment_path, class: current_page?(new_appointment_path) ? 'nes-text is-success' : '' %>
+      <%= link_to 'all doctors', doctors_path, class: current_page?(doctors_path) ? 'nes-text is-success' : '' %>
+    </nav>
+    <% if flash[:errors] %>
+    <div class="errors nes-container is-rounded">
+      <% flash[:errors].each do |error| %>
+        <p><%= error %></p>
+      <% end %>
+    </div>
+    <% end %>
+    <main class="nes-container is-centered">
+    <%= yield %>
+    </main>
+  </body>
+</html>
