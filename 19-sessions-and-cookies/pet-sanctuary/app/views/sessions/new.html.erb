@@ -1,0 +1,6 @@
+<h2>Log In</h2>
+<!-- We use a form_tag here rather than a form_for because we are not creating or updating an instance of one our models - all we want to do is get a username and use that to find a user in our database -->
+<%= form_tag sessions_path do %>
+  <%= label :user, :username %>
+  <%= text_field :user, :username %>
+<% end %>
