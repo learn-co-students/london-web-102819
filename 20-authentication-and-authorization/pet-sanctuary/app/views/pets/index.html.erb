@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pets.each do |pet| %>
+      <tr>
+        <td><%= link_to pet.name, pet %></td>
+        <!-- A user will only see links to edit or destroy a pet if they are logged in and the pet belongs to them -->
+        <% if current_user && pet.user == current_user %>
+          <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
+          <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<!-- We only let a user see the link to create a new pet if they're logged in -->
+<% if current_user %>
+  <%= link_to 'New Pet', new_pet_path %>
+<% end %>
