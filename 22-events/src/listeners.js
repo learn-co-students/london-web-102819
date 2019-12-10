@@ -1,0 +1,1 @@
+form.addEventListener("submit", handleFormSubmission);
