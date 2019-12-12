@@ -1,22 +1,11 @@
-fetch("http://localhost:3000/books")
-  // .json() reads the JSON body
-  // of the promise return value
-  // and makes a JS OBJECT out of it
-  .then(data => data.json())
-  // every method you pass in as an argument
-  // to .then() implicitly receives the resolved
-  // value of the previous promise
-  .then(createAllBooks);
-// is equivalent to:
-// .then(books => createAllBooks(books));
+const getBooksButton = document.querySelector("#get-books");
+getBooksButton.addEventListener("click", getAllBooks);
 
-fetch("http://localhost:3000/books")
-  .then(function(data) {
-    return data.json();
-  })
-  .then(function(books) {
-    createAllBooks(books);
-  });
+function getAllBooks() {
+  fetch("http://localhost:3000/books")
+    .then(data => data.json())
+    .then(createAllBooks);
+}
 
 function createABook(book) {
   const li = document.createElement("li");
@@ -29,4 +18,14 @@ function createAllBooks(books) {
   for (let i = 0; i < books.length; i++) {
     booksUl.append(createABook(books[i]));
   }
+}
+
+function APICreateABook(bookData) {
+  fetch("http://localhost:3000/books", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(bookData)
+  });
 }

@@ -1,0 +1,22 @@
+{
+  "books": [
+    {
+      "id": 6,
+      "author": "Zadie Smith",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/517BqHtwIKL._SX324_BO1,204,203,200_.jpg",
+      "title": ""
+    },
+    {
+      "id": 7,
+      "author": "Maya Angelou",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/41SKsBaGXRL._SX301_BO1,204,203,200_.jpg",
+      "title": "AFTER RENDER"
+    },
+    {
+      "id": 8,
+      "author": "Toni Morrison ",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/413-xT0izBL._SX322_BO1,204,203,200_.jpg",
+      "title": "The Bluest Eye"
+    }
+  ]
+}

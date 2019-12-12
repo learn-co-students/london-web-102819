@@ -1,14 +1,9 @@
-can you talk about:
-- why do we need a separate frontend?
-- what is a SPA?
-- http?
-- what is `fetch` for ?
-- json?
+- perform full CRUD using fetch
 
-practical:
-- fetch to retrieve data and display in the dom
-- fetch to send data
+  - [ ] C create
+  - [x] R read
+  - [ ] U update
+  - [ ] D delete
 
-- promises?
-- client side state vs server side state
-
+- talk about the config objects and how they map to http request headers and body contents
+- parsing JSON <> js objects and vice versa
