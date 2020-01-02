@@ -1,0 +1,65 @@
+{
+  "quotes": [
+    {
+      "id": 6,
+      "quote": "Do the best you can in every task, no matter how unimportant it may seem at the time. No one learns more about a problem than the person at the bottom.",
+      "author": "Sandra Day O'Connor"
+    },
+    {
+      "id": 7,
+      "quote": "Tell me and I forget, teach me and I remember, involve me and I learn.",
+      "author": "Benjamin Franklin"
+    },
+    {
+      "id": 8,
+      "quote": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+      "author": "Winston Churchhill"
+    },
+    {
+      "id": 9,
+      "quote": "Our greatest glory is not in never falling, but in rising everytime we fall.",
+      "author": "Confucius"
+    },
+    {
+      "quote": "a person can be smart, people are stupid",
+      "author": "fetti confeti",
+      "id": 11
+    },
+    {
+      "quote": "If you don't listen, you must feel",
+      "author": "pauly paul",
+      "id": 12
+    },
+    {
+      "quote": "Is Qing Happy?",
+      "author": "No doubt",
+      "id": 15
+    }
+  ],
+  "likes": [
+    {
+      "quoteId": 12,
+      "id": 3
+    },
+    {
+      "quoteId": 12,
+      "id": 4
+    },
+    {
+      "quoteId": 12,
+      "id": 5
+    },
+    {
+      "quoteId": 12,
+      "id": 6
+    },
+    {
+      "quoteId": null,
+      "id": 7
+    },
+    {
+      "quoteId": 6,
+      "id": 8
+    }
+  ]
+}
