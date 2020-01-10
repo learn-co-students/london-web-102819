@@ -14,7 +14,8 @@
       "specialty": "Making friends",
       "greased": true,
       "weight": 1.6,
-      "highest medal achieved": "silver"
+      "highest medal achieved": "silver",
+      "hidden": true
     },
     {
       "id": 3,
@@ -22,7 +23,8 @@
       "specialty": "truffle finder",
       "greased": false,
       "weight": 0.7,
-      "highest medal achieved": "gold"
+      "highest medal achieved": "gold",
+      "hidden": true
     },
     {
       "id": 4,

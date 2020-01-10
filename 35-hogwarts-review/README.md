@@ -9,6 +9,7 @@
 - render each hog name and picture in a tile
 - show the hog's details upon a user's click
 - filter the hogs that are greased
+- sort the hogs based on default
 - sort the hogs based on name
 - sort the hogs based on weight
 
