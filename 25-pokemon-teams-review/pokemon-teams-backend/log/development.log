@@ -9009,3 +9009,159 @@ Processing by TrainersController#index as */*
 Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 2.0ms | Allocations: 15527)
 
 
+Started GET "/" for ::1 at 2019-12-18 16:39:41 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/home/.rvm/gems/ruby-2.6.1/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/home/.rvm/gems/ruby-2.6.1/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.4ms | Allocations: 316)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 1603)
+
+
+Started GET "/traniers" for ::1 at 2019-12-18 16:39:45 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/traniers"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/trainers" for ::1 at 2019-12-18 16:39:51 +0000
+Processing by TrainersController#index as HTML
+  [1m[36mTrainer Load (0.5ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers"[0m
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 1]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 2]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 3]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 4]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 5]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 6]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 7]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 8]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+Completed 200 OK in 58ms (Views: 34.5ms | ActiveRecord: 2.9ms | Allocations: 26556)
+
+
+Started GET "/trainers" for ::1 at 2019-12-18 16:40:15 +0000
+Processing by TrainersController#index as */*
+  [1m[36mTrainer Load (0.1ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers"[0m
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 1]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 2]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 3]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 4]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 5]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 6]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 7]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 8]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 1.0ms | Allocations: 15546)
+
+
+Started GET "/trainers" for ::1 at 2019-12-18 16:40:16 +0000
+Processing by TrainersController#index as */*
+  [1m[36mTrainer Load (0.1ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers"[0m
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 1]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 2]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 3]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 4]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 5]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 6]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 7]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 8]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 1.4ms | Allocations: 15545)
+
+
+Started GET "/trainers" for ::1 at 2019-12-18 16:44:12 +0000
+Processing by TrainersController#index as */*
+  [1m[36mTrainer Load (0.1ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers"[0m
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 1]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 2]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 3]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 4]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 5]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 6]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 7]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."trainer_id" = ?[0m  [["trainer_id", 8]]
+  ↳ app/controllers/trainers_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 1.2ms | Allocations: 15528)
+
+
+Started DELETE "/pokemons/90" for ::1 at 2019-12-18 16:46:20 +0000
+Processing by PokemonsController#destroy as */*
+  Parameters: {"id"=>"90"}
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = ? LIMIT ?[0m  [["id", 90], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:13:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pokemons_controller.rb:14:in `destroy'
+  [1m[36mPokemon Destroy (0.9ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 90]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `destroy'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pokemons_controller.rb:14:in `destroy'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 2483)
+
+
+Started DELETE "/pokemons/95" for ::1 at 2019-12-18 16:46:35 +0000
+Processing by PokemonsController#destroy as */*
+  Parameters: {"id"=>"95"}
+  [1m[36mPokemon Load (0.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:13:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pokemons_controller.rb:14:in `destroy'
+  [1m[36mPokemon Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = ?[0m  [["id", 95]]
+  ↳ app/controllers/pokemons_controller.rb:14:in `destroy'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pokemons_controller.rb:14:in `destroy'
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 1.6ms | Allocations: 2283)
+
+

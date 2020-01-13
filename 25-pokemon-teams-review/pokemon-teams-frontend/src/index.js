@@ -47,9 +47,9 @@ const renderTrainerCard = trainer => {
     //If we are not performing any action, we return a void value
     list.childElementCount < 6
       ? getNewPokemon(trainer.id).then(pokemon => {
-          const li = createPokemonElem(pokemon);
-          list.append(li);
-        })
+        const li = createPokemonElem(pokemon);
+        list.append(li);
+      })
       : void 0
   );
   card.append(p, addBtn, list);
@@ -71,9 +71,11 @@ const createPokemonElem = pokemon => {
   releaseBtn.innerText = "Release";
   releaseBtn.className = "release";
 
-  releaseBtn.addEventListener("click", () =>
+  releaseBtn.addEventListener("click", () => {
     //This event listener is grabbing the li we created before since it's within scope
+    debugger;
     deletePokemon(pokemon.id).then(() => li.remove())
+  }
   );
 
   li.innerText = `${pokemon.nickname} (${pokemon.species})`;
@@ -90,7 +92,7 @@ const init = () => {
 //Because I want to make sure everything is on the page before I do anything else, I use this event listener
 document.addEventListener("DOMContentLoaded", init);
 
-/*  
+/*
 How a trainer's card looks like
 
 <div class="card" data-id="1">
