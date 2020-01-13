@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  background: black;
-  min-height: 100vh;
 }
 
 .App-logo {
@@ -37,9 +35,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.sprite {
-  width: 100px;
-  height: 100px;
 }
