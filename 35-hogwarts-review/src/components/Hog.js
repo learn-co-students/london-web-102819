@@ -5,6 +5,10 @@ class Hog extends React.Component {
     showDetails: false
   };
 
+  componentDidMount() {
+    console.log("hog mount");
+  }
+
   toggleDetails = () => this.setState({ showDetails: !this.state.showDetails });
 
   nameToImg = name =>
@@ -22,11 +26,17 @@ class Hog extends React.Component {
     const { name, specialty, weight, greased } = this.props;
     const { showDetails } = this.state;
     const medal = this.props["highest medal achieved"];
-
+    console.log("hog render");
     return (
       <div className="ui card">
         <div className="image">
-          <img src={this.requireImage()} />
+          <img
+            ref={el => {
+              console.log("hog img ref");
+              this.imgEl = el;
+            }}
+            src={this.requireImage()}
+          />
         </div>
         <div className="content">
           <a className="header">{name}</a>
