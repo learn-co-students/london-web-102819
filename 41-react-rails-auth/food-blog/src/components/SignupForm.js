@@ -1,0 +1,47 @@
+import React, { useState, useEffect } from "react";
+import API from "../adapters/API";
+
+const SignupForm = ({ onSuccess }) => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: ""
+  });
+  const [errors, setErrors] = useState([]);
+
+  const handleChange = e => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    API.signup(formData)
+      .then(user => onSuccess(user))
+      .catch(errorPromise => {
+        errorPromise.then(errorData => setErrors(errorData.errors));
+      });
+  };
+
+  return (
+    <form onSubmit={handleSubmit} onChange={handleChange}>
+      {errors.join(", ")}
+      <input
+        type="email"
+        name="email"
+        placeholder="E mail"
+        value={formData.email}
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="Pass word"
+        value={formData.password}
+      />
+      <input type="submit" value="Log in" />
+    </form>
+  );
+};
+
+export default SignupForm;
